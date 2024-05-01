@@ -1,0 +1,110 @@
+html, body {
+  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(0, 102, 255) 0%, rgb(0, 204, 255) 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.button_style {
+  margin-top: 1%;
+  margin-left: 20px !important;
+  margin-right: 20px;
+  font-size: 16px;
+  background-color: #6200EA;
+  color: #FFF;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.button_style:hover {
+  background-color: #7E57C2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button_style:active {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.button_style:focus {
+  box-shadow: 0 0 0 3px rgba(100, 100, 255, 0.5);
+}
+
+.centerTable {
+  margin: 15px auto;
+  padding: 0px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px 0 rgba(15, 29, 227, 0.37);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #3f51b5;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px;
+}
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax value as needed */
+  justify-items: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  /*New*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: inherit;
+}
+
+
+.task-card {
+  width: 320px; /* Fixed width for all cards */
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+.task-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .task-card {
+    width: 100%; /* Full width on smaller screens */
+    padding: 10px;
+    border-radius: 30px; /* Reduced border-radius for rounder corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  
+  .add-product-dialog .MuiTextField-root, .edit-product-dialog .MuiTextField-root {
+    width: 90%;
+  }
+}
